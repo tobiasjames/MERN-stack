@@ -1,8 +1,12 @@
-function Form() {
+function Send() {
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        alert("message sent!")
+    }
     return (
         <div>
-            <form method={"POST"} action={"http://localhost:5000"}>
+            <form method={"POST"} action={"http://localhost:5000"} onSubmit={handleSubmit}>
                 <label>Input data: </label>
                 <input type="string" name={"data"}/>
 
@@ -15,4 +19,4 @@ function Form() {
     )
 }
 
-export default Form
+export default Send
